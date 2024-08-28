@@ -1,6 +1,6 @@
 from dataclasses import dataclass
 from discord.webhook import Webhook, WebhookMessage
-from typing import List, Dict
+from typing import List, Dict, Union
 import json
 import logging
 import traceback
@@ -107,7 +107,7 @@ class CacheManager:
 
 
 
-  async def get_message_for_status(self, status_id: str) -> WebhookMessage|None:
+  async def get_message_for_status(self, status_id: str) -> Union[WebhookMessage, None]:
     """
       Gets the message for a status id.
 
