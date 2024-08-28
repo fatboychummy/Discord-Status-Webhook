@@ -1,10 +1,10 @@
 webhook = dict(
   # The URL of your Discord webhook.
-  url        = "",
+  url = "",
 
   # The username the webhook will use. Note that discord does not allow webhooks
   # to use the name "Discord" at all.
-  username   = "Status",
+  username = "Status",
 
   # The avatar URL the webhook will use. If blank, will just use a default
   # discord avatar.
@@ -61,7 +61,7 @@ log = dict(
   # - "a": Append mode. Will append to the file every time the script is run.
   #        This can result in rather large log files if on log levels at or
   #        below logging.INFO, since old data is not removed.
-  log_file_mode = "w",
+  log_file_mode = "a",
 
   # The log format to use. Default is:
   # "%(asctime)s,%(msecs)d %(name)s %(levelname)s %(message)s"
