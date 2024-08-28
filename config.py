@@ -2,7 +2,8 @@ webhook = dict(
   # The URL of your Discord webhook.
   url        = "",
 
-  # The username the webhook will use.
+  # The username the webhook will use. Note that discord does not allow webhooks
+  # to use the name "Discord" at all.
   username   = "Status",
 
   # The avatar URL the webhook will use. If blank, will just use a default
