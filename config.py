@@ -51,7 +51,7 @@ api = dict(
 import logging
 log = dict(
   # The log level to use. Default is WARN.
-  log_level = logging.DEBUG,
+  log_level = logging.WARN,
 
   # The log file to write to. If empty string, will not write a log file at all.
   log_file  = "discord-status.log",
