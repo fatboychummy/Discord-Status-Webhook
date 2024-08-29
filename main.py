@@ -111,6 +111,7 @@ def build_embed(incident: dict) -> Embed:
     embed.add_field(
       name=f"{update['status'].capitalize()} (<t:{int(parser.isoparse(update['created_at']).timestamp())}{config.embeds['timestamp_format']}>) - {update['id']}",
       value=update["body"][:1024],
+      inline=False
     )
 
   embed.set_footer(text=incident["id"])
@@ -160,8 +161,6 @@ async def post_status(webhook: Webhook, incident: dict):
 
   main.info(f"Posting new status {incident['id']}...")
 
-  
-  
   main.debug(f"Posting embed for incident {incident['id']}...")
   message = await webhook.send(
     embed=build_embed(incident),
