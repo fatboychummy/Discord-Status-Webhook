@@ -39,7 +39,10 @@ embeds = dict(
   # Values taken from LeviSnoot's Gist:
   #  --> https://gist.github.com/LeviSnoot/d9147767abeef2f770e9ddcd91eb85aa
   # Check it out for more info, it is a useful resource.
-  timestamp_format = ":R"
+  timestamp_format = ":R",
+
+  # Whether or not to display the fields inline. Default is False.
+  inline = False,
 )
 
 api = dict(

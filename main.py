@@ -111,7 +111,7 @@ def build_embed(incident: dict) -> Embed:
     embed.add_field(
       name=f"{update['status'].capitalize()} (<t:{int(parser.isoparse(update['created_at']).timestamp())}{config.embeds['timestamp_format']}>) - {update['id']}",
       value=update["body"][:1024],
-      inline=False
+      inline=config.embeds["inline"]
     )
 
   embed.set_footer(text=incident["id"])
